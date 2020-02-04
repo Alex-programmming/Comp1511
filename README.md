@@ -1,1 +1,1 @@
-These codes are my works in UNSW COMP1511.
+These codes were written by me in UNSW COMP1511.
