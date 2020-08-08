@@ -111,7 +111,6 @@ int main(void) {
     int target_col, focus_1_row, focus_1_col, focus_2_row, focus_2_col;
     double length2;
 
-
     clearCanvas(canvas);
     // It is a loop to keep scanning
     // commands until you reach the end of input
@@ -144,15 +143,10 @@ int main(void) {
             drawEllipse(canvas, colour, focus_1_row, focus_1_col, 
             focus_2_row, focus_2_col, length2, fill);
         }
-
     }
     displayCanvas(canvas);
-
-
-
     return 0;
 }
-
 
 
 
@@ -160,14 +154,14 @@ int main(void) {
 // Function that is used to draw lines
 void drawLine(int canvas[N_ROWS][N_COLS], int length, int start_row, 
 int start_col, int direction, int exit, int colour) {
-    // Making sure the directions are between 0 and 360 degrees
-    if (direction >= 360) {
-        direction = direction % 360;
-    }
     if (length < 0) {
         // Draw the line in the opposite direction if length is less than 0
         length = abs(length);
         direction = direction + 180;
+    }
+    // Making sure the directions are between 0 and 360 degrees
+    if (direction >= 360) {
+        direction = direction % 360;
     }
     // Draw the lines in different degrees
     // i is used in loops in the functions that draw lines in different degrees
@@ -205,14 +199,14 @@ int start_col, int direction, int exit, int colour) {
 // Function that is used to draw squares
 void fillSquare(int canvas[N_ROWS][N_COLS], int length, int start_row,
  int start_col, int direction, int exit, int colour) {
-    // Making sure the directions are between 0 and 360 degrees
-    if (direction >= 360) {
-        direction = direction % 360;
-    }
     if (length < 0) {
         // Draw the square in the opposite direction if length is less than 0
         length = abs(length);
         direction = direction + 180;
+    }
+    // Making sure the directions are between 0 and 360 degrees
+    if (direction >= 360) {
+        direction = direction % 360;
     }
     // Draw the squares in different degrees
     // i is used in loops in the functions that draw squares in different degrees
